@@ -1,33 +1,40 @@
 import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ArrowRight, Code } from "lucide-react";
+import { SiN8N, SiOpenai, SiSupabase } from "react-icons/si";
 
 const projects = [
   {
     name: "Competitive Analysis Agent",
-    description: "Automates market research and competitive insight generation.",
+    description: "Automates market research and competitive insight generation using AI agents.",
     tags: ["Lovable", "n8n", "Gemini"],
-    link: "#"
+    tagIcons: [null, <SiN8N key="n8n" size={10} />, null],
+    // TODO: Replace "#" with the live demo or GitHub URL for this project
+    link: "#",
   },
   {
     name: "DocWriter Assistant",
     description: "MCP server that scrapes web data and collaboratively edits documents via conversation.",
     tags: ["Claude Sonnet 3.7", "MCP"],
-    link: "#"
+    tagIcons: [<SiOpenai key="openai" size={10} />, null],
+    // TODO: Replace "#" with the live demo or GitHub URL for this project
+    link: "#",
   },
   {
     name: "Reflect.ai",
     description: "Full-stack app analyzing user reflections through conversational UI.",
     tags: ["Lovable", "Supabase"],
-    link: "#"
-  }
+    tagIcons: [null, <SiSupabase key="supabase" size={10} />],
+    // TODO: Replace "#" with the live demo or GitHub URL for this project
+    link: "#",
+  },
 ];
 
 export function Projects() {
   return (
     <section id="projects" className="scroll-mt-24">
       <SectionHeader title="ai_projects" />
-      
+
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
           <motion.div
@@ -47,31 +54,33 @@ export function Projects() {
               </div>
               <span className="ml-2 font-mono text-[10px] text-muted-foreground opacity-50">bash</span>
             </div>
-            
+
             <div className="p-5 flex-1 flex flex-col">
               <h3 className="font-mono font-medium text-lg mb-2 text-foreground flex items-center gap-2">
                 <Code size={16} className="text-primary" />
                 {project.name}
               </h3>
-              <p className="text-sm text-muted-foreground mb-6 flex-1">
-                {project.description}
-              </p>
-              
+              <p className="text-sm text-muted-foreground mb-6 flex-1">{project.description}</p>
+
               <div className="space-y-4 mt-auto">
                 <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span 
-                      key={tag} 
-                      className="font-mono text-[10px] tracking-wide px-2 py-1 rounded bg-secondary text-secondary-foreground"
+                  {project.tags.map((tag, ti) => (
+                    <span
+                      key={tag}
+                      className="inline-flex items-center gap-1 font-mono text-[10px] tracking-wide px-2 py-1 rounded bg-secondary text-secondary-foreground"
                     >
+                      {project.tagIcons[ti]}
                       {tag}
                     </span>
                   ))}
                 </div>
-                
-                <a 
+
+                <a
                   href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center gap-1.5 text-sm font-mono text-primary hover:text-primary/80 transition-colors"
+                  data-testid={`project-link-${index}`}
                 >
                   View Project <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                 </a>

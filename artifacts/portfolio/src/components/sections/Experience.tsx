@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { SiDell } from "react-icons/si";
 import { Building2 } from "lucide-react";
 
-function CompanyBadge({ initials, color }: { initials: string; color: string }) {
+function InitialBadge({ initials, bgColor, textColor }: { initials: string; bgColor: string; textColor: string }) {
   return (
     <span
-      className="inline-flex items-center justify-center w-full h-full font-bold text-xs font-mono"
-      style={{ color }}
+      className="inline-flex items-center justify-center w-full h-full font-bold text-[10px] font-mono rounded-full"
+      style={{ backgroundColor: bgColor, color: textColor }}
     >
       {initials}
     </span>
@@ -16,11 +17,12 @@ function CompanyBadge({ initials, color }: { initials: string; color: string }) 
 const experiences = [
   {
     company: "Deluxe Corporation",
-    badge: <CompanyBadge initials="DX" color="#0057A8" />,
+    // TODO: Update to Tesla if user confirms current employer has changed
+    logo: <InitialBadge initials="DX" bgColor="#0057A8" textColor="#fff" />,
     role: "AI Product Manager",
     dates: "Jul 2024 – Present",
     location: "Atlanta, GA",
-    note: "// TODO: Update company if confirmed at Tesla",
+    note: "// TODO: Confirm current company (Tesla vs Deluxe Corp)",
     bullets: [
       'Launched GenAI Document AI (OCR + entity extraction + ML 3-way matching) → earned "Red Shoes Award"',
       "Deployed GenAI chatbots (Claude + GPT APIs) on Deluxe.com and MyCorporation.com → 30% call center volume reduction",
@@ -30,7 +32,7 @@ const experiences = [
   },
   {
     company: "Dell Technologies",
-    badge: <CompanyBadge initials="DELL" color="#007DB8" />,
+    logo: <SiDell size={18} className="text-[#007DB8]" />,
     role: "Graduate PM Intern, Multi Cloud (ISG)",
     dates: "May 2023 – Aug 2023",
     location: "Austin, TX",
@@ -43,7 +45,7 @@ const experiences = [
   },
   {
     company: "Philips India",
-    badge: <CompanyBadge initials="PHI" color="#0B5ED7" />,
+    logo: <InitialBadge initials="PHI" bgColor="#0B1E8F" textColor="#fff" />,
     role: "Software Development Engineer II/I, Image Acquisition Platform",
     dates: "Feb 2019 – Jun 2022",
     location: "Bangalore, India",
@@ -72,20 +74,18 @@ export function Experience() {
             transition={{ delay: index * 0.1 }}
             className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
           >
-            {/* Icon */}
-            <div className="flex items-center justify-center w-10 h-10 rounded-full border border-border bg-card shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-[0_0_0_4px_hsl(var(--background))] relative z-10 text-foreground overflow-hidden">
-              {exp.badge}
+            {/* Logo */}
+            <div className="flex items-center justify-center w-10 h-10 rounded-full border border-border bg-card shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-[0_0_0_4px_hsl(var(--background))] relative z-10 overflow-hidden">
+              {exp.logo}
             </div>
 
             {/* Content */}
             <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-lg border border-border bg-card/50 hover:bg-card/80 transition-colors">
               <div className="flex flex-col space-y-1 mb-4">
                 <h3 className="font-semibold text-lg text-foreground">{exp.role}</h3>
-                <div className="font-mono text-sm text-primary flex items-center gap-2">
-                  <span>{exp.company}</span>
-                </div>
+                <div className="font-mono text-sm text-primary">{exp.company}</div>
                 {exp.note && (
-                  <div className="font-mono text-xs text-muted-foreground/50 italic">{exp.note}</div>
+                  <div className="font-mono text-xs text-amber-500/70 italic">{exp.note}</div>
                 )}
                 <div className="font-mono text-xs text-muted-foreground flex items-center justify-between mt-1">
                   <span>{exp.dates}</span>

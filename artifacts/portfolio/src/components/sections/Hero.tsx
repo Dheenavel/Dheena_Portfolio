@@ -78,7 +78,8 @@ export function Hero() {
               Newsletter <ArrowRight size={16} />
             </a>
             <a 
-              href="#" 
+              href="/Dheenadayalan_Kathirvel_Resume.pdf"
+              download="Dheenadayalan_Kathirvel_Resume.pdf"
               className="inline-flex items-center gap-2 bg-transparent text-foreground border border-border px-5 py-2.5 rounded-md font-medium hover:bg-muted transition-colors text-sm"
               data-testid="hero-resume"
             >

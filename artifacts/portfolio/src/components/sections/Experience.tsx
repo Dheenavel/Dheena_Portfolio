@@ -5,8 +5,9 @@ const experiences = [
   {
     company: "Deluxe Corporation",
     // TODO: Update to Tesla if user confirms current employer has changed
-    logo: "/logos/deluxe-logo.svg",
+    logo: "/logos/deluxe-logo.png",
     logoAlt: "Deluxe Corporation logo",
+    logoBg: "bg-white",
     role: "AI Product Manager",
     dates: "Jul 2024 – Present",
     location: "Atlanta, GA",
@@ -20,8 +21,9 @@ const experiences = [
   },
   {
     company: "Dell Technologies",
-    logo: "/logos/dell-logo.svg",
+    logo: "/logos/dell-logo.png",
     logoAlt: "Dell Technologies logo",
+    logoBg: "bg-white",
     role: "Graduate PM Intern, Multi Cloud (ISG)",
     dates: "May 2023 – Aug 2023",
     location: "Austin, TX",
@@ -34,8 +36,9 @@ const experiences = [
   },
   {
     company: "Philips India",
-    logo: "/logos/philips-logo.svg",
+    logo: "/logos/philips-logo.png",
     logoAlt: "Philips logo",
+    logoBg: "bg-[#0B1E8F]",
     role: "Software Development Engineer II/I, Image Acquisition Platform",
     dates: "Feb 2019 – Jun 2022",
     location: "Bangalore, India",
@@ -66,7 +69,7 @@ export function Experience() {
             data-testid={`experience-entry-${index}`}
           >
             {/* Company Logo */}
-            <div className="flex items-center justify-center w-12 h-12 rounded-full border border-border bg-card shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-[0_0_0_4px_hsl(var(--background))] relative z-10 overflow-hidden p-1">
+            <div className={`flex items-center justify-center w-12 h-12 rounded-full border border-border shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-[0_0_0_4px_hsl(var(--background))] relative z-10 overflow-hidden p-1.5 ${exp.logoBg}`}>
               <img
                 src={exp.logo}
                 alt={exp.logoAlt}

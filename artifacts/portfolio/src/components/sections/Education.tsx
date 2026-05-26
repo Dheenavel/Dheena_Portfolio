@@ -4,16 +4,18 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 const education = [
   {
     school: "Texas A&M University, Mays Business School",
-    logo: "/logos/tamu-logo.svg",
-    logoAlt: "Texas A&M University logo",
+    logo: "/logos/tamu-logo.png",
+    logoAlt: "Texas A&M University Mays Business School logo",
+    logoBg: "bg-[#500000]",
     degree: "Master of Business Administration (MBA)",
     date: "May 2024",
     location: "College Station, TX",
   },
   {
     school: "PSG College of Technology",
-    logo: "/logos/psg-logo.svg",
+    logo: "/logos/psg-logo.png",
     logoAlt: "PSG College of Technology logo",
+    logoBg: "bg-white",
     degree: "B.Tech, Information Technology",
     date: "May 2019",
     location: "Coimbatore, India",
@@ -36,11 +38,11 @@ export function Education() {
             className="p-6 rounded-lg border border-border bg-card/50 hover:bg-card/80 transition-colors"
             data-testid={`education-entry-${index}`}
           >
-            <div className="mb-4 h-10 flex items-center">
+            <div className={`mb-4 w-14 h-14 rounded-full flex items-center justify-center overflow-hidden p-1.5 ${edu.logoBg}`}>
               <img
                 src={edu.logo}
                 alt={edu.logoAlt}
-                className="h-full w-auto object-contain max-w-[160px]"
+                className="w-full h-full object-contain"
               />
             </div>
             <h3 className="font-semibold text-lg text-foreground mb-1">{edu.degree}</h3>

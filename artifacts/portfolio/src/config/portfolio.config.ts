@@ -15,10 +15,10 @@ export const personal = {
   title: "AI Product Manager",
   tagline: "Builder at heart, shipping AI products that create real impact.",
   bio: [
-    "I started my career building X-ray imaging systems at Philips. I loved the craft, but I kept asking one question: who decides what to build, and why? That question led me to an MBA, then into product management. The engineer in me never left — it just found a better outlet.",
-    "Now I build AI products at Tesla. Before that, I shipped GenAI systems at Deluxe that drove $2M in savings and 30% call deflection — not by writing better PRDs, but by getting close to real problems and being obsessive about outcomes. I write about what I learn on Substack.",
+    "I started my career building X-ray imaging systems at Philips. I loved the craft, but I kept asking one question: who decides what to build, and why? That question led me to an MBA, then into product management. The engineer in me never left, it just found a better outlet.",
+    "Now I build an AI-powered Payment Reconciliation system at Tesla. Before that, I shipped a range of AI products at Deluxe, from a GenAI-powered OCR solution to RAG-based and agentic chatbots that powered both customer-facing and internal applications. I write about what I learn on Substack.",
   ],
-  quote: "The best PMs create clarity for everyone around them when no one can see the full terrain.",
+  quote: "The best PMs create clarity for everyone around them.",
   /** Cycling titles shown in the hero */
   heroTitles: ["AI Product Manager", "Builder", "Substack Writer", "AI Enthusiast"],
   photo: "/photos/headshot.jpg",
@@ -50,7 +50,7 @@ export const experience = [
     dates: "2025 – Present",
     location: "Austin, TX",
     bullets: [
-      "Leading product strategy and delivery for Tesla's Global Payment Reconciliation platform, replacing manual market-by-market financial reconciliation with a unified automated system covering 40+ international markets and targeting a significant reduction in settlement exception handling overhead.",
+      "Leading Global Payment Reconciliation product.",
     ] as string[],
     photo: null as string | null,
   },
@@ -65,7 +65,6 @@ export const experience = [
     bullets: [
       'Launched GenAI Document AI combining OCR, entity extraction, and ML 3-way matching for receivables automation, earning the company\'s "Red Shoes Award" for innovation.',
       "Shipped a GenAI chatbot on Deluxe.com using Claude and GPT APIs, deflecting 30% of inbound call center volume and improving self-service resolution.",
-      "Built an AI call deflection and analytics product for the Print and Promo division, delivering $300K in annual cost savings and improving NPS by 40 points.",
       "Identified and automated high-friction manual workflows across 4 business units, driving $2M in annualized savings and eliminating 50K labor hours.",
     ],
     photo: null as string | null,
@@ -79,7 +78,7 @@ export const experience = [
     dates: "May 2023 – Aug 2023",
     location: "Austin, TX",
     bullets: [
-      'Delivered a competitive analysis of 3 hybrid and multi-cloud platforms that produced recommendations adopted directly into the ISG product roadmap, earning the "Bravo Dell Inspire" award — Dell\'s recognition for outstanding intern contribution.',
+      'Delivered a competitive analysis of 3 hybrid and multi-cloud platforms that produced recommendations adopted directly into the ISG product roadmap, earning the "Bravo Dell Inspire" award for outstanding intern contribution.',
       "Ran 30+ stakeholder interviews across engineering, sales, and customer success teams, surfacing unmet product needs that influenced the next-cycle enhancement backlog.",
     ],
     photo: null as string | null,
@@ -108,37 +107,14 @@ export const projects = [
     description:
       "AI-powered document processing with OCR, entity extraction, and ML 3-way matching for receivables automation at Deluxe (R360+ product).",
     tags: ["GenAI", "OCR", "ML"],
-    /** Replace "#" with a live demo or GitHub URL */
     link: "https://www.deluxe.com/receivables-management/cash-application/",
   },
   {
-    name: "Deluxe GenAI Chatbot",
+    name: "Deluxe.com Chatbot",
     description:
-      "Deployed GenAI chatbots using Claude and GPT APIs on Deluxe.com and MyCorporation.com, reducing call center volume by 30%.",
+      "Deployed a GenAI chatbot using Claude and GPT APIs on Deluxe.com, reducing inbound call center volume by 30% and improving self-service resolution.",
     tags: ["Claude", "GPT", "GenAI"],
     link: "https://www.deluxe.com/",
-  },
-  {
-    name: "Competitive Analysis Agent",
-    description: "Automates market research and competitive insight generation using AI agents.",
-    tags: ["Lovable", "n8n", "Gemini"],
-    // TODO: add your live demo or GitHub URL
-    link: "#",
-  },
-  {
-    name: "DocWriter Assistant",
-    description:
-      "MCP server that scrapes web data and collaboratively edits documents via conversation.",
-    tags: ["Claude Sonnet 3.7", "MCP"],
-    // TODO: add your live demo or GitHub URL
-    link: "#",
-  },
-  {
-    name: "Reflect.ai",
-    description: "Full-stack app analyzing user reflections through conversational UI.",
-    tags: ["Lovable", "Supabase"],
-    // TODO: add your live demo or GitHub URL
-    link: "#",
   },
 ];
 
@@ -153,7 +129,7 @@ export const writing = {
       title: "Two Years In: What Product Management Actually Demands of You",
       description:
         "The honest account of an engineer who chased the idea of building products and what building them actually taught him.",
-      date: "2025",
+      date: "2026",
       url: "https://dheenakathirvel31.substack.com/p/two-years-in-what-product-management",
     },
     {
@@ -169,7 +145,7 @@ export const writing = {
       title: "The Product Manager's Guide to the AI Stack",
       description:
         "Navigating architecture reviews, model selection, and infrastructure constraints without being an engineer.",
-      date: "2025",
+      date: "2026",
       url: "https://dheenakathirvel31.substack.com/p/the-product-managers-guide-to-the",
     },
   ],
@@ -181,7 +157,7 @@ export const speaking = [
     type: "Keynote Presentation",
     title: "Product Operating Model for the AI Era",
     description:
-      "Keynote presented to 100+ product leaders on moving to a new operating model for the AI era. Discussed the shift from traditional agile cadences to AI-assisted rapid prototyping and delivery.",
+      "Keynote presented to 100+ product folks on moving to a new operating model for the AI era. Discussed the shift from traditional agile cadences to AI-assisted rapid prototyping and delivery.",
     event: "Product Coffee",
     location: "Atlanta, GA",
     date: "Dec 2025",

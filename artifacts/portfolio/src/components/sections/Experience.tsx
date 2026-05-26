@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { SiDell } from "react-icons/si";
 import { experience } from "@/config/portfolio.config";
+
+/** Companies that use a react-icon instead of an image file */
+const ICON_LOGOS: Record<string, React.ReactNode> = {
+  "Dell Technologies": <SiDell size={28} className="text-[#007DB8]" />,
+};
 
 export function Experience() {
   return (
@@ -20,9 +26,11 @@ export function Experience() {
           >
             {/* Company Logo */}
             <div
-              className={`flex items-center justify-center w-12 h-12 rounded-full border border-border shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-[0_0_0_4px_hsl(var(--background))] relative z-10 overflow-hidden p-1.5 ${exp.logoBg}`}
+              className={`flex items-center justify-center w-12 h-12 rounded-full border border-border shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-[0_0_0_4px_hsl(var(--background))] relative z-10 overflow-hidden p-1.5 ${ICON_LOGOS[exp.company] ? "bg-white" : exp.logoBg}`}
             >
-              <img src={exp.logo} alt={exp.logoAlt} className="w-full h-full object-contain" />
+              {ICON_LOGOS[exp.company] ?? (
+                <img src={exp.logo} alt={exp.logoAlt} className="w-full h-full object-contain" />
+              )}
             </div>
 
             {/* Content */}

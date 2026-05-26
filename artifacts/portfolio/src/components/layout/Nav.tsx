@@ -36,7 +36,7 @@ export function Nav() {
           className="font-mono font-bold text-lg tracking-tighter hover:text-primary transition-colors"
           data-testid="link-home"
         >
-          DHEENA<span className="text-primary">_</span>
+          DHEENA_KATHIRVEL<span className="text-primary">_</span>
         </a>
 
         {/* Desktop Nav */}

@@ -49,7 +49,7 @@ export const experience = [
     role: "AI Product Manager",
     dates: "2025 – Present",
     location: "Austin, TX",
-    bullets: [] as string[],
+    bullets: ["Building Global Payment Reconciliation at Tesla."] as string[],
     /** Optional banner image shown when bullets are empty */
     photo: "/photos/tesla.jpg",
   },

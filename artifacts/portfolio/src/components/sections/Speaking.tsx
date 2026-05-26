@@ -24,17 +24,12 @@ export function Speaking() {
           >
             <div className="flex flex-col md:flex-row">
               {/* Thumbnail */}
-              <div className="relative md:w-96 shrink-0 overflow-hidden bg-muted">
+              <div className="md:w-96 shrink-0 overflow-hidden bg-muted">
                 <img
                   src={talk.thumbnail}
                   alt={`${talk.title} — ${talk.event}`}
                   className="w-full h-full object-cover aspect-video md:aspect-auto group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-colors">
-                  <div className="w-14 h-14 rounded-full bg-primary/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                    <Play size={22} className="text-white ml-1" fill="white" />
-                  </div>
-                </div>
               </div>
 
               {/* Content */}

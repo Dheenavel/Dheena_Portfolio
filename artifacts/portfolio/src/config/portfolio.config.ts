@@ -187,7 +187,7 @@ export const speaking = [
     location: "Atlanta, GA",
     date: "Dec 2025",
     videoUrl: links.youtubeKeynote,
-    thumbnail: "/photos/keynote-thumbnail.jpg",
+    thumbnail: "/photos/keynote-thumbnail.png",
   },
 ];
 

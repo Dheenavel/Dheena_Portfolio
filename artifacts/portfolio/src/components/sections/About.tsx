@@ -19,7 +19,7 @@ export function About() {
         <p>
           My focus is on creating tangible business value. Recently, I've driven $2M+ in cost savings and reduced 
           call center volume by 30% through targeted GenAI deployments. I'm a passionate learner who constantly consumes 
-          insights on business, tech, and AI—and shares those learnings on my Substack.
+          insights on business, tech, and AI, and shares those learnings on my Substack.
         </p>
         
         <div className="mt-8 p-4 bg-muted/50 border border-border rounded-md inline-block">

@@ -57,7 +57,7 @@ export function Hero() {
           </div>
 
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl">
-            Builder at heart — shipping AI products that create real impact.
+            Builder at heart, shipping AI products that create real impact.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
@@ -71,7 +71,9 @@ export function Hero() {
               <FaLinkedin /> LinkedIn <ArrowRight size={16} />
             </a>
             <a 
-              href="#writing" 
+              href="https://dheenakathirvel31.substack.com/"
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground border border-border/50 px-5 py-2.5 rounded-md font-medium hover:bg-secondary/80 transition-colors text-sm"
               data-testid="hero-newsletter"
             >
@@ -95,19 +97,20 @@ export function Hero() {
           </div>
         </motion.div>
 
-        {/* Photo Placeholder */}
+        {/* Headshot Photo */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="hidden md:flex justify-center"
         >
-          <div className="w-56 h-56 rounded-full border border-border/50 bg-card/50 backdrop-blur-sm flex items-center justify-center relative group overflow-hidden">
-            <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors" />
-            <span className="font-mono text-sm text-muted-foreground">[ Your Photo ]</span>
-            
-            {/* Decorative orbit */}
-            <div className="absolute inset-0 rounded-full border border-primary/20 animate-[spin_10s_linear_infinite]" style={{ borderStyle: 'dashed' }} />
+          <div className="w-56 h-56 rounded-full border-2 border-primary/30 bg-card/50 backdrop-blur-sm relative group overflow-hidden shadow-xl">
+            <img
+              src="/photos/headshot.jpg"
+              alt="Dheenadayalan Kathirvel"
+              className="w-full h-full object-cover object-center"
+            />
+            <div className="absolute inset-0 rounded-full ring-4 ring-primary/10 group-hover:ring-primary/20 transition-all" />
           </div>
         </motion.div>
       </div>

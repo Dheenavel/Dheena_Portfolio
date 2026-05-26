@@ -3,8 +3,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { SiSubstack } from "react-icons/si";
 
-// TODO: Replace SUBSTACK_URL with your actual Substack URL (e.g. "https://yourname.substack.com")
-const SUBSTACK_URL = "#";
+const SUBSTACK_URL = "https://dheenakathirvel31.substack.com/";
 
 export function Writing() {
   return (
@@ -15,7 +14,7 @@ export function Writing() {
         <div className="max-w-xl">
           <h2 className="text-2xl font-bold mb-2">Thoughts on Building</h2>
           <p className="text-muted-foreground">
-            I write about AI, Product Management, and the future of building — on Substack.
+            I write about AI, Product Management, and the future of building, on Substack.
           </p>
         </div>
         <a

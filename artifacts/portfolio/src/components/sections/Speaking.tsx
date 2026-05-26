@@ -31,7 +31,7 @@ export function Speaking() {
             
             <div className="flex flex-wrap gap-4 pt-2">
               <div className="flex items-center gap-1.5 font-mono text-xs text-muted-foreground">
-                <MapPin size={14} /> Product Coffee — Atlanta, GA
+                <MapPin size={14} /> Product Coffee, Atlanta, GA
               </div>
               <div className="flex items-center gap-1.5 font-mono text-xs text-muted-foreground">
                 <Calendar size={14} /> Dec 2025

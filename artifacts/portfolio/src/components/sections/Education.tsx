@@ -1,26 +1,6 @@
 import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-
-const education = [
-  {
-    school: "Texas A&M University, Mays Business School",
-    logo: "/logos/tamu-logo.png",
-    logoAlt: "Texas A&M University Mays Business School logo",
-    logoBg: "bg-[#500000]",
-    degree: "Master of Business Administration (MBA)",
-    date: "May 2024",
-    location: "College Station, TX",
-  },
-  {
-    school: "PSG College of Technology",
-    logo: "/logos/psg-logo.png",
-    logoAlt: "PSG College of Technology logo",
-    logoBg: "bg-white",
-    degree: "B.Tech, Information Technology",
-    date: "May 2019",
-    location: "Coimbatore, India",
-  },
-];
+import { education } from "@/config/portfolio.config";
 
 export function Education() {
   return (
@@ -39,11 +19,7 @@ export function Education() {
             data-testid={`education-entry-${index}`}
           >
             <div className={`mb-4 w-14 h-14 rounded-full flex items-center justify-center overflow-hidden p-1.5 ${edu.logoBg}`}>
-              <img
-                src={edu.logo}
-                alt={edu.logoAlt}
-                className="w-full h-full object-contain"
-              />
+              <img src={edu.logo} alt={edu.logoAlt} className="w-full h-full object-contain" />
             </div>
             <h3 className="font-semibold text-lg text-foreground mb-1">{edu.degree}</h3>
             <p className="font-mono text-sm text-primary mb-4">{edu.school}</p>

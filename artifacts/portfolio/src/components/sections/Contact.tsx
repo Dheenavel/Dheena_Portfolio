@@ -2,13 +2,14 @@ import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Mail, ArrowRight } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
+import { links } from "@/config/portfolio.config";
 
 export function Contact() {
   return (
     <section id="contact" className="scroll-mt-24 pb-12">
       <SectionHeader title="contact" />
-      
-      <motion.div 
+
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -16,19 +17,19 @@ export function Contact() {
       >
         <h2 className="text-3xl font-bold mb-4">Let's connect</h2>
         <p className="text-muted-foreground mb-8">
-          Always open to discussing AI, product management, or new opportunities. 
+          Always open to discussing AI, product management, or new opportunities.
           Feel free to reach out directly.
         </p>
-        
+
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a 
-            href="mailto:dheenavel@gmail.com"
+          <a
+            href={`mailto:${links.email}`}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-medium hover:bg-primary/90 transition-colors"
           >
-            <Mail size={18} /> dheenavel@gmail.com
+            <Mail size={18} /> {links.email}
           </a>
-          <a 
-            href="https://linkedin.com/in/dheenadayalan-kathirvel/"
+          <a
+            href={links.linkedin}
             target="_blank"
             rel="noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground border border-border/50 px-6 py-3 rounded-md font-medium hover:bg-secondary/80 transition-colors"

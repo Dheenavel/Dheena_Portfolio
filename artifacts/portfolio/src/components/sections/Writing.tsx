@@ -2,32 +2,7 @@ import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { SiSubstack } from "react-icons/si";
-
-const SUBSTACK_URL = "https://dheenakathirvel31.substack.com/";
-
-const posts = [
-  {
-    tag: "[Career]",
-    title: "Two Years In: What Product Management Actually Demands of You",
-    description: "The honest account of an engineer who chased the idea of building products and what building them actually taught him.",
-    date: "2025",
-    url: "https://dheenakathirvel31.substack.com/p/two-years-in-what-product-management",
-  },
-  {
-    tag: "[AI]",
-    title: "The PM's Operating Model for the AI Era",
-    description: "Engineering is 10x faster. Product Management is the new bottleneck. Here's the 3-part framework (Impact, Execution, Optics) to fix it.",
-    date: "2025",
-    url: "https://dheenakathirvel31.substack.com/p/the-pms-operating-model-for-the-ai",
-  },
-  {
-    tag: "[AI Stack]",
-    title: "The Product Manager's Guide to the AI Stack",
-    description: "Navigating architecture reviews, model selection, and infrastructure constraints without being an engineer.",
-    date: "2025",
-    url: "https://dheenakathirvel31.substack.com/p/the-product-managers-guide-to-the",
-  },
-];
+import { writing, links } from "@/config/portfolio.config";
 
 export function Writing() {
   return (
@@ -36,13 +11,11 @@ export function Writing() {
 
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10">
         <div className="max-w-xl">
-          <h2 className="text-2xl font-bold mb-2">Thoughts on Building</h2>
-          <p className="text-muted-foreground">
-            I write about AI, Product Management, and the future of building, on Substack.
-          </p>
+          <h2 className="text-2xl font-bold mb-2">{writing.heading}</h2>
+          <p className="text-muted-foreground">{writing.subheading}</p>
         </div>
         <a
-          href={SUBSTACK_URL}
+          href={links.substack}
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-md font-medium hover:bg-primary/90 transition-colors text-sm shrink-0"
@@ -54,7 +27,7 @@ export function Writing() {
       </div>
 
       <div className="grid md:grid-cols-3 gap-6">
-        {posts.map((post, index) => (
+        {writing.posts.map((post, index) => (
           <motion.a
             key={index}
             href={post.url}

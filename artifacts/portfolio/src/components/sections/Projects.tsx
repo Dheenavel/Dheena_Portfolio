@@ -1,45 +1,7 @@
 import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ArrowRight, Code } from "lucide-react";
-import { SiN8N, SiOpenai, SiSupabase } from "react-icons/si";
-
-const projects = [
-  {
-    name: "GenAI OCR + Cash Application",
-    description: "AI-powered document processing with OCR, entity extraction, and ML 3-way matching for receivables automation at Deluxe (R360+ product).",
-    tags: ["GenAI", "OCR", "ML"],
-    tagIcons: [null, null, null],
-    link: "https://www.deluxe.com/receivables-management/cash-application/",
-  },
-  {
-    name: "Deluxe GenAI Chatbot",
-    description: "Deployed GenAI chatbots using Claude and GPT APIs on Deluxe.com and MyCorporation.com, reducing call center volume by 30%.",
-    tags: ["Claude", "GPT", "GenAI"],
-    tagIcons: [<SiOpenai key="openai" size={10} />, null, null],
-    link: "https://www.deluxe.com/",
-  },
-  {
-    name: "Competitive Analysis Agent",
-    description: "Automates market research and competitive insight generation using AI agents.",
-    tags: ["Lovable", "n8n", "Gemini"],
-    tagIcons: [null, <SiN8N key="n8n" size={10} />, null],
-    link: "#",
-  },
-  {
-    name: "DocWriter Assistant",
-    description: "MCP server that scrapes web data and collaboratively edits documents via conversation.",
-    tags: ["Claude Sonnet 3.7", "MCP"],
-    tagIcons: [<SiOpenai key="openai2" size={10} />, null],
-    link: "#",
-  },
-  {
-    name: "Reflect.ai",
-    description: "Full-stack app analyzing user reflections through conversational UI.",
-    tags: ["Lovable", "Supabase"],
-    tagIcons: [null, <SiSupabase key="supabase" size={10} />],
-    link: "#",
-  },
-];
+import { projects } from "@/config/portfolio.config";
 
 export function Projects() {
   return (
@@ -75,26 +37,31 @@ export function Projects() {
 
               <div className="space-y-4 mt-auto">
                 <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, ti) => (
+                  {project.tags.map((tag) => (
                     <span
                       key={tag}
                       className="inline-flex items-center gap-1 font-mono text-[10px] tracking-wide px-2 py-1 rounded bg-secondary text-secondary-foreground"
                     >
-                      {project.tagIcons[ti]}
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-mono text-primary hover:text-primary/80 transition-colors"
-                  data-testid={`project-link-${index}`}
-                >
-                  View Project <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                </a>
+                {project.link !== "#" ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm font-mono text-primary hover:text-primary/80 transition-colors"
+                    data-testid={`project-link-${index}`}
+                  >
+                    View Project <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                  </a>
+                ) : (
+                  <span className="inline-flex items-center gap-1.5 text-sm font-mono text-muted-foreground/50 cursor-not-allowed">
+                    Link coming soon
+                  </span>
+                )}
               </div>
             </div>
           </motion.div>

@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { SiDell } from "react-icons/si";
+import { SiDell, SiTesla } from "react-icons/si";
 import { experience } from "@/config/portfolio.config";
 
 /** Companies that use a react-icon instead of an image file */
 const ICON_LOGOS: Record<string, React.ReactNode> = {
+  "Tesla": <SiTesla size={26} className="text-[#CC0000]" />,
   "Dell Technologies": <SiDell size={28} className="text-[#007DB8]" />,
 };
 

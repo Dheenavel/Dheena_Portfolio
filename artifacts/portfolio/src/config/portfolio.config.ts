@@ -13,14 +13,13 @@ export const personal = {
   shortName: "Dheena",
   navName: "DHEENA_KATHIRVEL",
   title: "AI Product Manager",
-  tagline: "Builder at heart, shipping AI products that create real impact.",
+  tagline: "Engineer by training, AI Product Manager by passion. I love building things that matter to real people.",
   bio: [
-    "I started my career building X-ray imaging systems at Philips. I loved the craft, but I kept asking one question: who decides what to build, and why? That question led me to an MBA, then into product management. The engineer in me never left, it just found a better outlet.",
-    "Now I build an AI-powered Payment Reconciliation system at Tesla. Before that, I shipped a range of AI products at Deluxe, from a GenAI-powered OCR solution to RAG-based and agentic chatbots that powered both customer-facing and internal applications. I write about what I learn on Substack.",
+    "I was building features for an X-ray imaging system at Philips when something clicked. The feature I was working on was going to help someone. A radiologist. A technician. A patient. I could feel it. That feeling lit a fire in me, and it has never gone out. I started asking questions about the product side of things, discovered product management, and made a decision that changed everything. The engineer in me never left. It just found a better outlet.",
+    "Today I'm building AI-powered global payment reconciliation at Tesla. Before that, at Deluxe Corporation, I shipped AI products from scratch: a named GenAI document intelligence platform, customer and internal chatbots, and 10+ automation bots across business units. Work that created $2M+ in savings and eliminated 50,000 hours of manual labor. What kept me going through all of it: pure love for the craft of building.",
   ],
   quote: "The best PMs create clarity for everyone around them.",
-  /** Cycling titles shown in the hero */
-  heroTitles: ["AI Product Manager", "Builder", "Substack Writer", "AI Enthusiast"],
+  heroTitles: ["AI Product Manager", "Builder", "Substack Writer", "Engineer turned PM"],
   photo: "/photos/headshot.jpg",
 };
 
@@ -28,18 +27,15 @@ export const personal = {
 export const links = {
   linkedin: "https://linkedin.com/in/dheenadayalan-kathirvel/",
   substack: "https://dheenakathirvel31.substack.com/",
-  /** Path to the PDF in /public — the Resume button downloads this */
-  resume: "/Dheenadayalan_Kathirvel_Resume.pdf",
-  resumeFilename: "Dheenadayalan_Kathirvel_Resume.pdf",
   email: "dheenavel@gmail.com",
-  /** YouTube keynote — used in the Speaking section */
   youtubeKeynote: "https://www.youtube.com/live/itHp7_GQLaY",
-  /** Add GitHub, Twitter/X, etc. here as needed */
-  // github: "https://github.com/...",
-  // twitter: "https://x.com/...",
 };
 
 // ── Experience ────────────────────────────────────────────────
+// Each entry has:
+//   context  — one sentence framing the role
+//   products — what was built (shown as cards)
+//   impact   — achievement chips shown at the bottom of the card
 export const experience = [
   {
     company: "Tesla",
@@ -47,12 +43,17 @@ export const experience = [
     logoAlt: "Tesla",
     logoBg: "bg-black",
     role: "AI Product Manager",
-    dates: "2025 – Present",
-    location: "Austin, TX",
-    bullets: [
-      "Leading Global Payment Reconciliation product.",
-    ] as string[],
-    photo: null as string | null,
+    dates: "May 2026 – Present",
+    location: "Bellevue, WA",
+    context: "Leading AI-powered financial infrastructure for Tesla's global operations.",
+    products: [
+      {
+        name: "Global Payment Reconciliation Platform",
+        description: "End-to-end AI system automating payment reconciliation at global scale across Tesla's financial operations.",
+        tags: ["AI", "Fintech", "Scale"],
+      },
+    ],
+    impact: [] as string[],
   },
   {
     company: "Deluxe Corporation",
@@ -60,61 +61,117 @@ export const experience = [
     logoAlt: "Deluxe Corporation logo",
     logoBg: "bg-white",
     role: "AI Product Manager",
-    dates: "Jul 2024 – 2025",
+    dates: "Jul 2024 – Apr 2026",
     location: "Atlanta, GA",
-    bullets: [
-      'Launched GenAI Document AI combining OCR, entity extraction, and ML 3-way matching for receivables automation, earning the company\'s "Red Shoes Award" for innovation.',
-      "Shipped a GenAI chatbot on Deluxe.com using Claude and GPT APIs, deflecting 30% of inbound call center volume and improving self-service resolution.",
-      "Identified and automated high-friction manual workflows across 4 business units, driving $2M in annualized savings and eliminating 50K labor hours.",
+    context: "Built and shipped Deluxe's first generation of enterprise AI products: from document intelligence to customer engagement to company-wide automation.",
+    products: [
+      {
+        name: "Helius",
+        description: "GenAI-powered document intelligence platform combining OCR, entity extraction, and automated validation for receivables teams. Earned the company's Red Shoes Award for enterprise-wide impact.",
+        tags: ["GenAI", "OCR", "Document AI"],
+      },
+      {
+        name: "Cerebro",
+        description: "3-way ML matching engine for cash application. Automatically reconciled invoices, payments, and remittance data, replacing a fully manual workflow end to end.",
+        tags: ["ML", "Cash Application"],
+      },
+      {
+        name: "Conversational AI Suite",
+        description: "Designed and deployed RAG and agentic AI chatbots on Deluxe.com and multiple other customer-facing and internal channels. Handled complex client queries without human escalation.",
+        tags: ["Claude", "GPT", "RAG", "Agentic AI"],
+      },
+      {
+        name: "RPA Automation Suite",
+        description: "10+ robotic process automation bots deployed across 4 business units, aligned with 80+ stakeholders. Delivered $2M in annualized savings and cost avoidance, eliminating 50,000+ labor hours of manual work.",
+        tags: ["RPA", "Automation"],
+      },
     ],
-    photo: null as string | null,
+    impact: ["Red Shoes Award", "$2M+ savings", "50K+ hours saved", "NPS +40%"],
   },
   {
     company: "Dell Technologies",
     logo: "/logos/dell-logo.png",
     logoAlt: "Dell Technologies logo",
     logoBg: "bg-white",
-    role: "Graduate PM Intern, Multi Cloud (ISG)",
+    role: "Graduate PM Intern, Multi-Cloud (ISG)",
     dates: "May 2023 – Aug 2023",
     location: "Austin, TX",
-    bullets: [
-      'Delivered a competitive analysis of 3 hybrid and multi-cloud platforms that produced recommendations adopted directly into the ISG product roadmap, earning the "Bravo Dell Inspire" award for outstanding intern contribution.',
-      "Ran 30+ stakeholder interviews across engineering, sales, and customer success teams, surfacing unmet product needs that influenced the next-cycle enhancement backlog.",
+    context: "Embedded within the Infrastructure Solutions Group to shape the multi-cloud product strategy through competitive research and deep stakeholder discovery.",
+    products: [
+      {
+        name: "Dell ISG Multi-Cloud Strategy",
+        description: "Competitive deep-dive across 3 leading hybrid and multi-cloud platforms. Findings were adopted directly into the ISG product roadmap, backed by 30+ stakeholder interviews across engineering, sales, and customer success.",
+        tags: ["Product Strategy", "Competitive Analysis"],
+      },
     ],
-    photo: null as string | null,
+    impact: ["Bravo Dell Inspire Award", "Roadmap adopted by ISG"],
   },
   {
     company: "Philips India",
     logo: "/logos/philips-logo.png",
     logoAlt: "Philips logo",
     logoBg: "bg-[#0B1E8F]",
-    role: "Software Development Engineer II/I, Image Acquisition Platform",
+    role: "Software Development Engineer II/I",
     dates: "Feb 2019 – Jun 2022",
     location: "Bangalore, India",
-    bullets: [
-      'Launched a call rate analysis system that identified recurring failure patterns across MRI imaging platforms, reducing customer complaint rates by 30% and earning the "Q1-2021 Quality Champion Award."',
-      "Led software upgrade prioritization for MRI backup systems, cutting backup completion time by 10% and measurably reducing unplanned downtime risk across deployed units.",
-      "Designed and deployed workflow automation tools for the engineering team, improving team efficiency by 60% and eliminating manual reporting overhead across the Image Acquisition Platform.",
+    context: "Built software features for Philips' medical imaging products: MRI systems and DXR X-ray platforms used by radiologists and clinical teams worldwide.",
+    products: [
+      {
+        name: "Autovoice Software Installer",
+        description: "Automated the Autovoice software installation as part of MRI system upgrades, replacing a previously manual step with a reliable automated workflow.",
+        tags: [],
+      },
+      {
+        name: "Auto-Assist Collimation",
+        description: "UI-guided collimation feature for DXR X-ray systems that walked radiologic technologists step-by-step through precise beam positioning, reducing setup errors and improving clinical workflow efficiency.",
+        tags: [],
+      },
+      {
+        name: "MRI Video Export",
+        description: "Video export capability for MRI diagnostic workstations, enabling clinical teams to export imaging captures to external systems outside the MRI software for remote review and consultation.",
+        tags: [],
+      },
+      {
+        name: "Call Rate Analysis System",
+        description: "Pattern detection system across MRI imaging platforms that identified recurring failure signatures before they became complaints, reducing customer complaint rates by 30%.",
+        tags: [],
+      },
     ],
-    photo: null as string | null,
+    impact: ["Q1-2021 Quality Champion Award", "30% complaint rate reduction", "60% team efficiency gain"],
   },
 ];
 
-// ── Projects ──────────────────────────────────────────────────
+// ── Featured Work ─────────────────────────────────────────────
+// Highlighted products and personal AI prototypes.
+// link: "#" shows "In Progress" instead of a link button.
 export const projects = [
   {
-    name: "GenAI OCR + Cash Application",
+    name: "Helius — GenAI Document AI",
     description:
-      "AI-powered document processing with OCR, entity extraction, and ML 3-way matching for receivables automation at Deluxe (R360+ product).",
-    tags: ["GenAI", "OCR", "ML"],
+      "Enterprise document intelligence platform built at Deluxe. Combined OCR, entity extraction, and ML validation to automate receivables processing at scale.",
+    tags: ["GenAI", "OCR", "Enterprise AI"],
     link: "https://www.deluxe.com/receivables-management/cash-application/",
   },
   {
-    name: "Deluxe.com Chatbot",
+    name: "Competitive Analysis Agent",
     description:
-      "Deployed a GenAI chatbot using Claude and GPT APIs on Deluxe.com, reducing inbound call center volume by 30% and improving self-service resolution.",
-    tags: ["Claude", "GPT", "GenAI"],
-    link: "https://www.deluxe.com/",
+      "Personal build. Automates market research and competitive insight generation using Lovable, n8n, and Gemini — end-to-end from brief to structured report.",
+    tags: ["n8n", "Gemini", "Agentic AI"],
+    link: "#",
+  },
+  {
+    name: "DocWriter Assistant",
+    description:
+      "MCP server built with Claude Sonnet that scrapes web data and collaboratively edits documents through natural conversation.",
+    tags: ["MCP", "Claude", "Sonnet 3.7"],
+    link: "#",
+  },
+  {
+    name: "Reflect.ai",
+    description:
+      "Full-stack app built with Lovable and Supabase that helps users process and analyze personal reflections through a conversational UI.",
+    tags: ["Lovable", "Supabase", "Full-Stack"],
+    link: "#",
   },
 ];
 
@@ -122,16 +179,8 @@ export const projects = [
 export const writing = {
   heading: "Thoughts on Building",
   subheading:
-    "I write about AI, Product Management, and the future of building, on Substack.",
+    "I write about AI, product management, and what building actually teaches you — on Substack.",
   posts: [
-    {
-      tag: "[Career]",
-      title: "Two Years In: What Product Management Actually Demands of You",
-      description:
-        "The honest account of an engineer who chased the idea of building products and what building them actually taught him.",
-      date: "2026",
-      url: "https://dheenakathirvel31.substack.com/p/two-years-in-what-product-management",
-    },
     {
       tag: "[AI]",
       title: "The PM's Operating Model for the AI Era",
@@ -148,6 +197,14 @@ export const writing = {
       date: "2026",
       url: "https://dheenakathirvel31.substack.com/p/the-product-managers-guide-to-the",
     },
+    {
+      tag: "[Career]",
+      title: "Two Years In: What Product Management Actually Demands of You",
+      description:
+        "The honest account of an engineer who chased the idea of building products and what building them actually taught him.",
+      date: "2026",
+      url: "https://dheenakathirvel31.substack.com/p/two-years-in-what-product-management",
+    },
   ],
 };
 
@@ -157,7 +214,7 @@ export const speaking = [
     type: "Keynote Presentation",
     title: "Product Operating Model for the AI Era",
     description:
-      "Keynote presented to 100+ product folks on moving to a new operating model for the AI era. Discussed the shift from traditional agile cadences to AI-assisted rapid prototyping and delivery.",
+      "Keynote presented to 100+ product professionals on the shift to a new operating model for the AI era, moving from traditional agile cadences to AI-assisted rapid prototyping and continuous delivery.",
     event: "Product Coffee",
     location: "Atlanta, GA",
     date: "Dec 2025",
@@ -177,24 +234,24 @@ export const skills = [
     title: "AI & Analytics",
     color: "border-purple-500/20 text-purple-400 bg-purple-500/10",
     items: [
-      "GPT", "Claude", "Gemini", "Document AI", "n8n",
-      "LangChain", "MCP", "RAG", "Prompt Design", "Tableau", "Power BI",
+      "LLM APIs", "Document AI", "RAG", "Agentic Workflows", "Prompt Design",
+      "LangChain", "MCP", "n8n", "Tableau", "Power BI",
     ],
   },
   {
     title: "Technical",
     color: "border-green-500/20 text-green-400 bg-green-500/10",
-    items: ["Python", "SQL", "Java", "C#", "APIs", "SDKs", "RPA"],
+    items: ["Python", "SQL", "Java", "C#", "WPF", "R", "APIs", "SDKs", "RPA"],
   },
   {
     title: "Tools",
     color: "border-orange-500/20 text-orange-400 bg-orange-500/10",
-    items: ["JIRA", "MS Office"],
+    items: ["JIRA", "JetBrains", "MS Office", "Lovable", "Supabase"],
   },
   {
     title: "Certifications",
     color: "border-neutral-500/20 text-neutral-400 bg-neutral-500/10",
-    items: ["AI Product Management (OpenAI, Dec 2025)"],
+    items: ["AI Product Management — OpenAI (Dec 2025)"],
   },
 ];
 
@@ -224,8 +281,34 @@ export const education = [
 export const seo = {
   title: "Dheenadayalan Kathirvel — AI Product Manager",
   description:
-    "AI PM shipping enterprise GenAI products. $2M+ in savings, 30% call deflection. Writing on Substack. Speaker at Product Coffee Atlanta.",
+    "AI PM shipping enterprise GenAI products. $2M+ in savings, NPS +40%, 50K hours saved. Writing on Substack. Speaker at Product Coffee Atlanta.",
   ogImage: "/photos/headshot.jpg",
   twitterHandle: "",
-  siteUrl: "https://dheenakathirvel.replit.app",
+  siteUrl: "https://dheenakathirvel.com",
 };
+
+// ── Nav ───────────────────────────────────────────────────────
+export const nav = {
+  links: [
+    { label: "About",      href: "#about" },
+    { label: "Experience", href: "#experience" },
+    { label: "Work",       href: "#projects" },
+    { label: "Writing",    href: "#writing" },
+    { label: "Speaking",   href: "#speaking" },
+    { label: "Skills",     href: "#skills" },
+    { label: "Education",  href: "#education" },
+    { label: "Contact",    href: "#contact" },
+  ],
+};
+
+// ── Sections ──────────────────────────────────────────────────
+export const sections = [
+  { id: "about",      enabled: true },
+  { id: "experience", enabled: true },
+  { id: "projects",   enabled: true },
+  { id: "writing",    enabled: true },
+  { id: "speaking",   enabled: true },
+  { id: "skills",     enabled: true },
+  { id: "education",  enabled: true },
+  { id: "contact",    enabled: true },
+] as const;

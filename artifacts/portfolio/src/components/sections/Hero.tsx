@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, FileText, Mail } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
 import { SiSubstack } from "react-icons/si";
 import { personal, links } from "@/config/portfolio.config";
@@ -20,7 +20,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-dot-grid opacity-30 [mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)]" />
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-50" />
 
-      <div className="max-w-4xl mx-auto px-6 w-full relative z-10 grid md:grid-cols-[1fr_250px] gap-12 items-center">
+      <div className="max-w-4xl mx-auto px-6 w-full relative z-10 grid md:grid-cols-[1fr_320px] gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ export function Hero() {
             </p>
           </div>
 
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl">
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
             {personal.tagline}
           </p>
 
@@ -73,14 +73,6 @@ export function Hero() {
               <SiSubstack size={14} /> Newsletter <ArrowRight size={16} />
             </a>
             <a
-              href={links.resume}
-              download={links.resumeFilename}
-              className="inline-flex items-center gap-2 bg-transparent text-foreground border border-border px-5 py-2.5 rounded-md font-medium hover:bg-muted transition-colors text-sm"
-              data-testid="hero-resume"
-            >
-              <FileText size={16} /> Resume
-            </a>
-            <a
               href="#contact"
               className="inline-flex items-center gap-2 bg-transparent text-foreground border border-border px-5 py-2.5 rounded-md font-medium hover:bg-muted transition-colors text-sm"
               data-testid="hero-contact"
@@ -96,7 +88,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="hidden md:flex justify-center"
         >
-          <div className="w-56 h-56 rounded-full border-2 border-primary/30 bg-card/50 backdrop-blur-sm relative group overflow-hidden shadow-xl">
+          <div className="w-72 h-72 rounded-full border-2 border-primary/30 bg-card/50 backdrop-blur-sm relative group overflow-hidden shadow-xl">
             <img
               src={personal.photo}
               alt={personal.name}
